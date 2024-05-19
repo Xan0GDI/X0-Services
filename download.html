@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+   <link href='diecss/download.css' rel='stylesheet' type='text/css'>
+    <title>Download</title>
+    <!-- img src="https://grabify.org/1wuS" -->
+</head>
+<body>
+  <a href="download/NewEngine.zip" download="Xengine" id="download-link">download-Link</a>
+  <script>
+    function startDownload() {
+      // Finde den Link mit der ID "download-link"
+      var link = document.getElementById("download-link");
+      // Klicke den Link an
+      link.click(); 
+      setTimeout(function() {
+    window.open(self.location, '_self').close();
+}, 1000);
+ // Schließe das Fenster
+    }
+
+    // Rufe die Funktion auf, wenn die Seite geladen ist
+    window.onload = startDownload;
+  </script>
+</body>
+</html>
